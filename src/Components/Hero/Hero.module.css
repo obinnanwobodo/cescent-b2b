@@ -1,0 +1,137 @@
+.genhero{
+    display: flex;
+    flex-direction: column;
+align-items: center;
+ background-image: url('../../../public/hero-background-Bo_MmDxp.jpg');
+justify-content: center;
+  background-size: cover;       
+  background-position: center;   
+  background-repeat: no-repeat;  
+  height: 100vh;              
+  position: relative;
+width: 100%;
+}
+
+
+.genhero::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,1,0.7);
+z-index: 1;
+
+}
+
+.trusted, .mainherobdy {
+position: relative;
+z-index: 1;
+}
+
+
+.trusted{
+    background-color: #1ee8eb33;
+ color:  #1ee8eb;
+ font-size: 12px;
+    font-family: system-ui;
+padding: 2px;
+padding-left: 8px;
+padding-right: 8px;
+border-radius: 16px;
+border: 1px solid #1ee8eb;
+
+
+}
+
+
+.mainherobdy{
+      display: flex;
+    flex-direction: column;
+align-items: center;
+
+}
+
+
+.tyb{
+font-size: 72px;
+    font-family: system-ui;
+font-weight: 700;
+color: #fefefe;
+}
+
+.wec{
+font-size: 72px;
+    font-family: system-ui;
+font-weight: 700;
+color:  #1ee8eb;
+position: relative;
+bottom: 30px;
+}
+
+
+
+.wehelp{
+font-size: 24px;
+color: #ffffffe6;
+    font-family: system-ui;
+    position: relative;
+bottom: 20px;
+text-align: center;
+
+}
+
+
+.genbtn{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+top: 10px;
+}
+
+.btn1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1ee8eb;
+    padding: 9.5px;
+    border-radius: 8px;
+width: 210px;
+color: #212;
+    font-family: system-ui;
+font-size: 14px;
+font-weight: 500;
+gap: 8px;
+}
+
+.btn1 svg{
+    width: 14px;
+    height: 14px;
+}
+
+
+.btn2{
+    justify-content: center;
+    background-color: #fefefe;
+    border: 1px solid #fefefe;
+    padding: 9px;
+    border-radius: 8px;
+color: #212;
+
+    font-family: system-ui;
+font-size: 14px;
+font-weight: 500;
+width: 175px;
+
+}
+
+
+.btn1:hover, .btn2:hover{
+transform: scale(1.1);
+    transition: transform 0.5s ease;
+
+}

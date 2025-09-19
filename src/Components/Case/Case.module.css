@@ -1,0 +1,48 @@
+.gencase{
+  display: flex;
+    justify-content: center;
+    background-color:  #fefefe;
+    width: 100%;
+    padding-bottom: 50px;
+
+}
+
+
+
+.cp{
+display: flex;
+flex-direction: column;
+margin-top: 70px;
+    align-items: center;
+gap: 9px;
+}
+
+
+.cs{
+
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: #031326;
+    color: #ffffff;
+    padding: 4px;
+    border-radius: 16px;
+    font-family: system-ui;
+    width: 100px;
+ 
+}
+
+
+.proven{
+
+      font-size: 48px;
+color: #171e26;
+font-weight: 700;
+    font-family: system-ui;
+
+}
+
+.industry{
+        color: #1eebeb;
+}

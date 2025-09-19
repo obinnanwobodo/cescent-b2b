@@ -1,0 +1,115 @@
+.genservices{
+    display: flex;
+    justify-content: center;
+    background-color:  #fefefe;
+    width: 100%;
+    padding-bottom: 50px;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.oco{
+display: flex;
+flex-direction: column;
+margin-top: 70px;
+    align-items: center;
+gap: 9px;
+}
+
+
+.os{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: #031326;
+    color: #ffffff;
+    padding: 4px;
+    border-radius: 16px;
+    font-family: system-ui;
+    width: 100px;
+
+}
+
+.csfmc{
+    font-size: 48px;
+color: #171e26;
+font-weight: 700;
+    font-family: system-ui;
+
+}
+
+.modern{
+    color: #1eebeb;
+}
+
+.oe{
+    font-size: 20px;
+    color: #627184;
+    font-family: system-ui;
+    text-align: center;
+}
+
+
+
+/* MAPPING */
+
+.mappinggen{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 25px;
+padding: 25px;
+margin-top: 40px;
+}
+
+
+.eachofthem{
+background-color: #ffffff;
+padding: 30px;
+border-radius: 10px;
+width: 303px;
+height: 300px;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.allinagrp{
+display: flex;
+flex-direction: column;
+gap: 23px;
+
+}
+
+
+.icons{
+    color: #1ee8eb;
+    background-color: #1ee8eb1a;
+    justify-content: center;
+    align-items: center;
+    max-width: 62px;
+    padding: 18px;
+    width: 100%;
+    border-radius: 10px;
+    
+}
+
+.icons svg{
+    width: 26.67px;
+    height: 26.67px;
+}
+
+.tittle{
+    font-size: 20px;
+    color: #171e26;
+    font-family: system-ui;
+    font-weight: 500;
+}
+
+.desc{
+font-size: 16px;
+color: #627184;
+    font-family: system-ui;
+
+}

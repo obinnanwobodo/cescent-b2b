@@ -1,0 +1,101 @@
+.navgen{
+display: flex;
+justify-content: space-between;
+padding: 20px;
+align-items: center;
+background-color: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+min-height: 10px;
+height: 11%;
+  position: fixed; /* fixed at top */
+  top: 0;
+  left: 0;
+  z-index: 9999;
+    width: 100%;
+
+}
+
+
+.scacb{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: #627184;
+    font-family: system-ui;
+font-size: 16px;
+font-weight: 500 ;
+cursor: pointer;
+
+}
+
+
+.services,
+.studies,
+.about,
+.contact {
+
+position: relative;
+
+}
+
+
+.services::after,
+.studies::after,
+.about::after,
+.contact::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;           /* adjust distance from text */
+  width: 0;                /* start hidden */
+  height: 2px;             /* thickness of underline */
+  background-color: #212; /* same color as text or desired */
+  transition: width 0.3s ease; /* smooth animation */
+  border-radius: 10px;
+}
+
+
+.services:hover::after,
+.studies:hover::after,
+.about:hover::after,
+.contact:hover::after {
+  width: 100%; /* expand underline to full width */
+}
+
+
+.cs{
+    color: #031326;
+    font-size: 24px;
+    font-family: system-ui;
+    font-weight: 700;
+    position: relative;
+    top: 3px;
+    left: 10px;
+
+}
+
+.sbs{
+    color: #627184;
+    font-size: 14px;
+    font-family: system-ui;
+    position: relative;
+bottom: 3px;
+    left: 10px;
+
+
+}
+
+.bookcon{
+    background-color: #1ee8eb;
+    color: #212;
+    padding: 7px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-family: system-ui;
+
+}
+
+.bookcon:hover{
+transform: scale(0.95);
+
+}
