@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './case.module.css'
+import styles from './Case.module.css'
 import { FaArrowRight } from "react-icons/fa6";
 
 
