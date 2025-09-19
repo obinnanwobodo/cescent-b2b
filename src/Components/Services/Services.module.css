@@ -4,8 +4,8 @@
     background-color:  #fefefe;
     width: 100%;
     padding-bottom: 50px;
- box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) ;
+border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 
@@ -71,6 +71,14 @@ border-radius: 10px;
 width: 303px;
 height: 300px;
  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+   transition: transform 0.3s ease; /* smooth transition */
+}
+
+
+
+.eachofthem:hover{
+transform: scale(1.1);
+  
 }
 
 

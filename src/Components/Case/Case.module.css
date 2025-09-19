@@ -4,6 +4,7 @@
     background-color:  #fefefe;
     width: 100%;
     padding-bottom: 50px;
+    flex-direction: column;
 
 }
 
@@ -45,4 +46,107 @@ font-weight: 700;
 
 .industry{
         color: #1eebeb;
+}
+
+
+
+
+
+/* MAPPING */
+
+.casemain {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px 80px;
+    font-family: system-ui;
+    background-color: #fff;
+}
+
+.casecard {
+    border: 1px solid #1eebeb;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+   transition: transform 0.3s ease; /* smooth transition */
+
+}
+
+
+.casecard:hover{
+transform: scale(1.1);
+  
+}
+
+.caseheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.category, .featured {
+    background-color: #e0f6fd;
+    color: #43c1ee;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 5px;
+white-space: nowrap;
+  }
+
+
+.featured {
+    background-color: #0c525333;
+    color: #2cbfc2;
+}
+
+.metric {
+    color: #1eebeb;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.casebody h4 {
+    color: #031326;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0 5px 0;
+}
+
+.casebody p {
+    color: #627184;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.casefooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.duration {
+    color: #627184;
+    font-size: 12px;
+}
+
+.readmore {
+    color: #1eebeb;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.readmore:hover {
+    color: #2cbfc2;
 }
