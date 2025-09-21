@@ -8,56 +8,63 @@ import Testimonials from "@/Components/Testimonials/Testimonials";
 import About from "@/Components/About/About";
 import Process from "@/Components/Process/Process";
 import Contact from "@/Components/Contacts/Contact";
+import Footer from "@/Components/Footer/Footer";
 
 export default function Home() {
   return (
     <div>
 
-<div>
+<div id="nav id">
   
 <Navbar/>
 </div>
 
 
-<div>
+<div id="hero">
   <Hero/>
 </div>
 
 
-<div>
+<div id="service">
   
 <Services/>
 </div>
 
-<div>
+<div id="case">
   <Case/>
 
 </div>
 
 
-<div>
+<div id="insight">
   <Insight/>
 </div>
 
 
-<div>
+<div id="testimonials">
   <Testimonials/>
 </div>
 
 
-<div>
+<div id="about">
   <About/>
 </div>
 
 
-<div>
+<div id="process">
   <Process/>
 </div>
 
 
 
-<div>
+<div id="contact">
   <Contact/>
+</div>
+
+
+
+<div id="footer">
+  <Footer/>
 </div>
 
     </div>

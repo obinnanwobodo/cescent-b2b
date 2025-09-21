@@ -82,15 +82,18 @@ const Contact = () => {
                         <div className={styles.followussection}>
                             <h3>Follow us</h3>
                             <div className={styles.socialicons}>
+
+                                  <a href="https://www.linkedin.com/in/obinna-nwobodo-088413377" target="_blank" rel="noopener noreferrer" className={styles.socialiconwrapper}>
+                                    <FaLinkedin className={styles.socialicon} />
+                                </a>
+                                
                                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialiconwrapper}>
                                     <FaInstagram className={styles.socialicon} />
                                 </a>
                                 <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className={styles.socialiconwrapper}>
                                     <FaTwitter className={styles.socialicon} />
                                 </a>
-                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialiconwrapper}>
-                                    <FaLinkedin className={styles.socialicon} />
-                                </a>
+                            
                                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialiconwrapper}>
                                     <FaFacebookF className={styles.socialicon} />
                                 </a>

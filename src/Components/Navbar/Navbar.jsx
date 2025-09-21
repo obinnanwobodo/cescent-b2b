@@ -1,4 +1,7 @@
-import React from 'react'
+'use client'
+
+
+import React, { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
 
 
@@ -7,6 +10,29 @@ import styles from './Navbar.module.css'
 
 
 const Navbar = () => {
+
+
+    const [isOpen, setIsOpen] = useState(false);
+
+
+
+    // Lock body scroll when modal is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+
+        // cleanup in case component unmounts
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [isOpen]);
+
+
+
+
     return (
         <div className={`${styles.navgen}`}>
 
@@ -16,16 +42,34 @@ const Navbar = () => {
             </div>
 
             <div className={`${styles.scacb}`}>
-                <p className={`${styles.services}`}>Services</p>
+                <p className={`${styles.services}`} ><a href="#service">Services</a></p>
 
-                <p className={`${styles.studies}`}>Case Studies</p>
+                <p className={`${styles.studies}`}><a href="#case">Case Studies</a></p>
 
-                <p className={`${styles.about}`}>About</p>
+                <p className={`${styles.about}`}><a href="#about">About</a></p>
 
-                <p className={`${styles.contact}`}>Contact</p>
+                <p className={`${styles.contact}`}><a href="#contact">Contact</a></p>
 
-                <button className={`${styles.bookcon}`}>Book Consultation</button>
+                <button className={`${styles.bookcon}`} onClick={() => setIsOpen(true)}>Book Consultation</button>
             </div>
+
+
+
+
+
+            {/* MODAL */}
+            {isOpen && (
+                <div className={styles.backdrop} onClick={() => setIsOpen(false)}>
+
+                    <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+                        <button onClick={() => setIsOpen(false)} className={styles.closeBtn}>Close nav</button>
+                    </div>
+
+                </div>
+            )}
+
+
+
 
 
 
