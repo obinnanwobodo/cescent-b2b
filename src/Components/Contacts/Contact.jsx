@@ -37,8 +37,8 @@ const Contact = () => {
                         <h2>Send us a message</h2>
                         <form>
                             <div className={styles.formrow}>
-                                <input type="text" placeholder="First Name" className={styles.inputfield} />
-                                <input type="text" placeholder="Last Name" className={styles.inputfield} />
+                                <input type="text" placeholder="First Name" className={styles.inputfieldd} />
+                                <input type="text" placeholder="Last Name" className={styles.inputfieldd} />
                             </div>
                             <input type="email" placeholder="Email Address" className={`${styles.inputfield} ${styles.fullwidth}`} />
                             <input type="text" placeholder="Company" className={`${styles.inputfield} ${styles.fullwidth}`} />

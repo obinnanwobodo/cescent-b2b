@@ -88,17 +88,18 @@ font-weight: 700;
 
 .sendmessagesection {
   padding: 40px;
-  max-width: 700px;
+  max-width: 619px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
-  
+margin-left: 25px;
+  max-height: 480px;
+  border-radius: 10px;
 }
 
 .sendmessagesection h2,
 .getintouchsection h2 {
   font-size: 24px;
   color: #333;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   font-weight: 600;
 }
 
@@ -108,13 +109,32 @@ font-weight: 700;
   margin-bottom: 20px;
 }
 
+
+.inputfieldd {
+ padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #555;
+  max-height: 40px;
+  width: 245px;
+  outline-color: #1eebeb;
+
+
+}
+
+
 .inputfield {
-  flex: 1;
   padding: 12px 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 15px;
   color: #555;
+  max-height: 40px;
+  outline-color: #1eebeb;
+
+
+
 }
 
 .inputfield::placeholder,
@@ -125,6 +145,9 @@ font-weight: 700;
 .fullwidth {
   width: calc(100% - 30px);
   margin-bottom: 20px;
+  max-height: 40px;
+  border-radius: 10px;
+
 }
 
 .textareafield {
@@ -133,10 +156,11 @@ font-weight: 700;
   resize: vertical;
   padding: 12px 15px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 15px;
   color: #555;
   margin-bottom: 30px;
+  outline-color: #1eebeb;
 }
 
 .sendmessagebutton {
@@ -144,7 +168,7 @@ font-weight: 700;
   color: #ffffff;
   padding: 14px 25px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
@@ -154,6 +178,10 @@ font-weight: 700;
   transition: background-color 0.3s ease;
   width: 90%;
   justify-content: center;
+  max-height: 40px;
+  position: relative;
+  bottom: 20px;
+
 }
 
 .sendmessagebutton:hover {
@@ -166,7 +194,6 @@ font-weight: 700;
 
 .getintouchsection {
   flex: 0.8;
-  padding: 40px;
   background-color: #ffffff;
 }
 
