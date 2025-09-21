@@ -1,0 +1,262 @@
+.gencontact{
+
+display: flex;
+flex-direction: column;
+    justify-content: center;
+    background-color:  #fefefe;
+    width: 100%;
+    padding-bottom: 50px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.crg{
+display: flex;
+flex-direction: column;
+margin-top: 70px;
+    align-items: center;
+gap: 9px;
+
+}
+
+.contact{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: #031326;
+    color: #ffffff;
+    padding: 4px;
+    border-radius: 16px;
+    font-family: system-ui;
+    width: 100px;
+
+}
+
+.ready{
+
+font-size: 48px;
+color: #171e26;
+font-weight: 700;
+    font-family: system-ui;
+}
+
+.transfor{
+    color: #1eebeb;
+
+}
+
+
+.get{
+
+ font-size: 20px;
+    color: #627184;
+    font-family: system-ui;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.appcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* .contactcard {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+ 
+  justify-content: space-between;
+  gap: 100px;
+} */
+
+
+.sendmessagesection {
+  padding: 40px;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  
+}
+
+.sendmessagesection h2,
+.getintouchsection h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.formrow {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.inputfield {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #555;
+}
+
+.inputfield::placeholder,
+.textareafield::placeholder {
+  color: #a0a0a0;
+}
+
+.fullwidth {
+  width: calc(100% - 30px);
+  margin-bottom: 20px;
+}
+
+.textareafield {
+  width: calc(100% - 30px);
+  min-height: 120px;
+  resize: vertical;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.sendmessagebutton {
+  background-color: #1eebeb;
+  color: #ffffff;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+  width: 90%;
+  justify-content: center;
+}
+
+.sendmessagebutton:hover {
+  background-color: #51d1d1;
+}
+
+.arrow {
+  font-size: 18px;
+}
+
+.getintouchsection {
+  flex: 0.8;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.contactinfoitem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.contacticon {
+  font-size: 20px;
+  color: #1eebeb;
+  margin-right: 15px;
+  padding: 10px;
+  background-color: #1eebeb1a;
+  border-radius: 50%;
+  
+}
+
+.contactinfoitem h3 {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contactinfoitem p {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.followussection {
+  margin-top: 40px;
+}
+
+.followussection h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.socialicons {
+  display: flex;
+  gap: 15px;
+}
+
+.socialiconwrapper {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s;
+}
+
+.socialiconwrapper:hover {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+  transform: scale(1.1);
+}
+
+.socialicon {
+  font-size: 18px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .contactcard {
+    flex-direction: column;
+    margin: 20px;
+  }
+  .sendmessagesection {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+  .formrow {
+    flex-direction: column;
+    gap: 0;
+  }
+  .fullwidth {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

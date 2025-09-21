@@ -67,6 +67,7 @@ background-color: #fefefe;
  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 margin-left: 20px;
 width: 852px;
+height: 752px;
 border-radius: 10px;
 margin-top: 60px;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth effect */
@@ -103,7 +104,7 @@ margin-top: 60px;
 display: flex;
 flex-direction: column;
 padding: 25px;
-gap: 20px;
+gap: 27px;
 
 }
 
@@ -255,7 +256,7 @@ height: 12px;
 
 
 .mappingbox2{
-    margin-top: 59px;
+    margin-top: 60px;
 }
 
 
@@ -308,6 +309,7 @@ gap: 20px;
     white-space: nowrap;
   position: relative;
   gap: 8px;
+  align-items: center;
 }
 
 
