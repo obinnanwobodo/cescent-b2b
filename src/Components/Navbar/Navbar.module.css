@@ -102,18 +102,637 @@ transform: scale(0.95);
 
 
 
-/* BOOK POP OUT NAV */
+
+/* BOOK POP OUT */
+
+
+
 
 
 .backdrop {
-  position: fixed;
-  
-  width: 66%;
-  height: 80vh;
-  background-color: #fefefe; /* darkness here */
+  position: relative;
+  max-width: 30%;
+  max-height: 50vh;
+  background-color: red;
   display: flex;
   z-index: 9998;
-  margin-top: 600px;
-  margin-left: 200px;
   border-radius: 10px;
+  margin-top: 330px;
+   overflow-y: auto; 
+     overflow-x: hidden;
+} 
+
+
+.modalBody{
+  position: relative;
+ bottom: 40px;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  /* Allow overlay itself to scroll if content is too tall */
+}
+
+
+
+/* Main container for the modal content */
+.modalContainer {
+    display: flex;
+    flex-direction: column;
+  background-color: #ffffff; /* White background for the modal */
+  border-radius: 12px; /* Rounded corners */
+  width: 65%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  padding: 30px; /* Padding inside the modal */
+  position: relative;
+  font-family: 'Inter', sans-serif; /* Adjusted to a common sans-serif like 'Inter' */
+  justify-content: center;
+  margin-top: 600px;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.modalTitle {
+  font-size: 24px; /* Exact font size */
+  font-weight: 700; /* Bold */
+  color: #1a202c; /* Dark text color */
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px; /* Size for the 'X' icon */
+  color: #a0aec0; /* Lighter grey for the close icon */
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.closeButton:hover {
+  color: #1a202c;
+}
+
+.stepIndicator {
+  background-color: #1a202c; /* Light blue background for step indicator */
+  color: #fefefe; /* Darker blue text color */
+  font-size: 14px;
+  font-weight: 600;
+  padding: 1px 12px;
+  border-radius: 20px;
+  display:flex;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+margin:20px  auto ;
+
+  width: fit-content; 
+}
+
+.modalDescription {
+  font-size: 16px;
+  color: #4a5568; /* Medium grey text color */
+  margin-bottom: 30px;
+  text-align: center; /* Centered as in screenshot */
+}
+
+.consultationOptions {
+  display: flex;
+  justify-content: space-between;
+  /* Space between cards */
+ gap: 20px;
+}
+
+.optionCard {
+    
+  max-width: 285px; /* Minimum width for cards */
+  border: 1px solid #e2e8f0; /* Light border */
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  max-height: 340px;
+}
+
+.optionCard:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle hover shadow */
+  border-color: #63b3ed; /* Highlight border on hover */
+}
+
+.cardHeader {
+  background-color: #e6fffa; /* Light green background for icon area */
+  border-radius: 50%; /* Circular background */
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px auto; /* Centered, with space below */
+}
+
+.cardIcon {
+  font-size: 28px; /* Size of the calendar icon */
+  color: #38b2ac; /* Green color for the icon */
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 10px;
+}
+
+.cardDuration {
+  font-size: 14px;
+  color: #718096; /* Medium grey */
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.durationIcon {
+  font-size: 14px;
+  margin-right: 5px;
+  color: #718096;
+}
+
+.cardDescription {
+  font-size: 14px;
+  color: #4a5568;
+  margin-bottom: 20px;
+  min-height: 40px; /* Ensure consistent height for description */
+}
+
+.cardFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left; /* Features aligned to the left */
+}
+
+.cardFeatures li {
+  font-size: 14px;
+  color: #4a5568;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.featureCheck {
+  color: #38b2ac; /* Green checkmark icon */
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .consultationOptions {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;
+  }
+  .optionCard {
+    width: 100%; /* Full width for cards */
+    max-width: 400px; /* Limit max width for readability */
+  }
+}
+
+@media (max-width: 600px) {
+  .modalContainer {
+    padding: 20px;
+    margin: 10px; /* Smaller margin for very small screens */
+  }
+  .modalTitle {
+    font-size: 20px;
+  }
+  .stepIndicator {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+  .modalDescription {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Step 2 Form ---------- */
+
+
+.modalBodyy{
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  position: relative;
+ 
+}
+
+.formRow {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.input {
+  flex: 1;
+  padding: 0.4rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus {
+  border-color: #1ee8eb;
+  outline: none;
+
+}
+
+.textarea {
+  min-height: 105px;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.textarea:focus {
+  border-color: #1ee8eb;
+  outline: none;
+
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+ 
+}
+
+.backBtn {
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  
+  max-height: 40px;
+  min-width: 400px;
+}
+
+.backBtn:hover {
+  background-color: #e0e0e0;
+}
+
+.submitBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1ee8eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  
+  max-height: 40px;
+  min-width: 400px;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.submitBtn:hover {
+  background-color: #56d9db;
+  transform: translateY(-2px);
+}
+
+
+
+/* SUBMITTED */
+
+
+
+.successModal {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  animation: popUp 0.3s ease-out;
+}
+
+.successModal h2 {
+  color: #38b2ac;
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-family: system-ui;
+}
+
+.successModal p {
+  font-size: 16px;
+  color: #4a5568;
+  margin-bottom: 20px;
+  font-family: system-ui;
+}
+
+@keyframes popUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+/* Add to your CSS file */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%); /* Initially hidden off-screen */
+}
+
+.mobileMenuOpen {
+  transform: translateX(0); /* Slide into view */
+}
+
+/* Style the links inside the mobile menu */
+.mobileMenu p,
+.mobileMenu button {
+  font-size: 24px;
+  margin: 20px 0;
+  font-family: system-ui;
+  color: #212;
+}
+
+.mobileMenu button {
+  background-color: #1ee8eb;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+
+
+/* RESPONSIVNESS */
+
+
+@media (max-width: 768px) {
+  /* Main Navbar */
+ .navgen {
+    width: 100%;   /* force navbar container to span screen */
+    margin: 0;     /* remove auto margin */
+    min-width: unset; /* remove restriction */
+    position: relative;
+  }
+
+  /* Hide regular navigation links */
+  .scacb {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+  
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+    top: 87px;
+    padding-bottom:30px;
+    padding-top: 30px;
+  }
+
+  /* Slide in the mobile menu */
+  .scacb.open {
+    display: flex;
+    position: absolute;
+    width: 100%;   /* now it will stretch properly */
+    left: 0;   
+  }
+
+  /* Hamburger Menu Button */
+  .hamburger {
+    display: block; /* Show hamburger button on mobile */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #031326;
+    cursor: pointer;
+    z-index: 9999;
+    margin: auto;
+    position: relative;
+    margin-right: 40px;
+  }
+  
+  /* Navbar Title */
+  .tittlendsub {
+      margin-left: 10px;
+  }
+
+  .cs {
+    font-size: 20px;
+  }
+  
+  .sbs {
+    font-size: 12px;
+  }
+
+  /* Book Consultation button inside the mobile menu */
+  .scacb .bookcon {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  /* Modal adjustments for mobile */
+  .modalContainer {
+    width: 90%; /* Make modal wider on smaller screens */
+    margin-top: 50px; /* Reduce top margin */
+    padding: 20px;
+  }
+
+  .modalHeader {
+    flex-direction: column; /* Stack header elements */
+    align-items: flex-start;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .modalDescription {
+    text-align: left;
+  }
+
+  .consultationOptions {
+    flex-direction: column; /* Stack consultation cards */
+  }
+
+  .optionCard {
+    width: 100%; /* Make cards full width */
+    max-width: none;
+  }
+  
+  /* Form adjustments for mobile */
+  .formRow {
+    flex-direction: column; /* Stack form inputs */
+    gap: 1.5rem;
+  }
+  
+  .backBtn, .submitBtn {
+      min-width: unset; /* Remove fixed width */
+      width: 100%; /* Make buttons full width */
+  }
+  
+  .buttonRow {
+      flex-direction: column-reverse; /* Put Back button on top for better flow */
+  }
+
+  .successModal {
+      width: 90%;
+  }
+}
+
+
+
+
+
+
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  /* Show the navigation links */
+  .scacb {
+    display: flex;
+    position: relative; /* Reset position */
+    height: auto;
+    width: auto;
+    transform: none; /* Remove transform */
+    background: none;
+    margin-right: auto;
+ 
+  }
+
+  /* Hide the hamburger button */
+  .hamburger {
+    display: none;
+  }
+  
+  /* Navbar spacing adjustments */
+  .navgen {
+    padding: 20px 40px;
+       gap: 100px;
+  }
+
+  .scacb {
+    gap: 14px;
+    font-size: 12px;
+  }
+  
+  /* Modal adjustments for tablet */
+  .modalContainer {
+    width: 80%; /* Widen the modal for tablets */
+    max-width: 800px;
+    padding: 30px;
+  }
+
+  .consultationOptions {
+    flex-wrap: wrap; /* Allow cards to wrap to a new line */
+    justify-content: center; /* Center the cards */
+  }
+
+  .optionCard {
+    width: calc(50% - 20px); /* Two cards per row with gap */
+    max-width: none;
+  }
+
+  /* Form button adjustments */
+  .backBtn, .submitBtn {
+      min-width: 200px; /* Adjust min-width for tablet */
+      max-width: 300px;
+  }
+  
+  .buttonRow {
+      flex-direction: row; /* Display buttons side by side */
+      justify-content: flex-end; /* Align to the right */
+  }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1400px){
+  .hamburger{
+    display: none;
+  }
+
+  .scacb{
+    margin-right: 70px;
+  }
 }

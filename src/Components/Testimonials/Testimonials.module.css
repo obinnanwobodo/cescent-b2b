@@ -125,3 +125,67 @@ font-weight: 700;
   color: #718096;
   margin: 0;
 }
+
+
+
+
+
+
+/* RESPONSIVENESS */
+
+
+@media (max-width: 768px) {
+  /* Main Container */
+  .testigen {
+    padding: 30px 15px; /* Adjust padding for mobile view */
+  }
+
+  /* Title and Subtitle */
+  .wocs {
+    font-size: 32px; /* Smaller font size for the main title */
+    text-align: center; /* Center align the title */
+  }
+
+  .testi {
+    width: 80px; /* Adjust width for the "Testimonials" badge */
+    font-size: 11px;
+  }
+
+  /* Testimonials Grid */
+  .testimonialsGrid {
+    grid-template-columns: 1fr; /* Stack all cards in a single column */
+    padding: 0 10px; /* Reduce horizontal padding */
+  }
+
+  /* Testimonial Cards */
+  .testimonialCard {
+    padding: 20px; /* Reduce card padding */
+    min-height: auto; /* Allow height to adjust to content */
+  }
+
+  .testimonialQuote {
+    font-size: 14px; /* Smaller font size for quotes */
+  }
+}
+
+
+
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  /* Testimonials Grid */
+  .testimonialsGrid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablet view */
+    gap: 25px; /* Add a bit more space between cards */
+    padding: 20px 40px; /* Increase horizontal padding */
+  }
+
+  /* Testimonial Cards */
+  .testimonialCard {
+    min-height: 280px; /* Adjust minimum height for a balanced look */
+  }
+
+  /* Title and Subtitle */
+  .wocs {
+    font-size: 40px; /* Slightly smaller title for tablets */
+  }
+}

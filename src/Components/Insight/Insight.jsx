@@ -189,16 +189,16 @@ const Insight = () => {
                 <div className={styles.mappingbox2}>
                     {insightsData.map((each, index) => (
                         <div key={index} className={styles.eachofthemm}>
-                            <div 
-  className={`${styles.gentextt} ${index === 0 ? styles.firstBox : ""}`}
->
+                            <div
+                                className={`${styles.gentextt} ${index === 0 ? styles.firstBox : ""}`}
+                            >
                                 <div className={styles.ds}>{each.tag}</div>
                                 <div className={styles.tittle}>{each.title.split("\n").map((line, i) => (
-                                        <React.Fragment key={i}>
-                                            {line}
-                                            <br />
-                                        </React.Fragment>
-                                    ))}
+                                    <React.Fragment key={i}>
+                                        {line}
+                                        <br />
+                                    </React.Fragment>
+                                ))}
                                 </div>
                                 <div className={styles.explore}>
                                     {each.description.split("\n").map((line, i) => (
@@ -221,7 +221,7 @@ const Insight = () => {
                                     </div>
                                 </div>
 
-                               
+
                             </div>
                         </div>
                     ))}
@@ -230,10 +230,10 @@ const Insight = () => {
 
 
 
-           <div className={styles.icnndvaa}>
-             <p className={styles.vaa}>View All Articles</p>
-              <div className={`${styles.rightawr}`}><FaArrowRight /> </div>
-           </div>
+            <div className={styles.icnndvaa}>
+                <p className={styles.vaa}>View All Articles</p>
+                <div className={`${styles.rightawr}`}><FaArrowRight /> </div>
+            </div>
 
         </div>
     )

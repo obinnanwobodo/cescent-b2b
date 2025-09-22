@@ -368,3 +368,213 @@ height: 14px;
 .icnndvaa:hover .vaa{
     color: #fefefe;
 }
+
+
+
+
+
+
+
+/* RESPONSIVENESS */
+
+
+
+@media (max-width: 768px) {
+  .geninsight {
+    padding-bottom: 30px;
+  }
+
+  .lis {
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+
+  .latest {
+    width: 90px;
+    font-size: 11px;
+    padding: 3px;
+  }
+
+  .industry {
+    font-size: 32px;
+    text-align: center;
+  }
+  
+  .stay {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .genbox {
+    flex-direction: column; /* Stack the main and secondary boxes */
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  /* Main Featured Article (mappingbox1) */
+  .mappingbox1 {
+    width: 90%; /* Take up most of the screen width */
+    height: auto;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .box1img img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .gentext {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .thefuture {
+    font-size: 20px;
+  }
+
+  .explore {
+    font-size: 14px;
+  }
+
+  .sdtndread {
+    flex-direction: column; /* Stack author/date and read more link */
+    gap: 10px;
+  }
+  
+  .icnndread {
+    position: static; /* Remove absolute positioning */
+    justify-content: flex-start;
+  }
+
+  /* Secondary Articles (mappingbox2) */
+  .mappingbox2 {
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: none; /* Remove outer shadow for a cleaner look */
+  }
+
+  .eachofthemm {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .sdt2 {
+    flex-direction: column; /* Stack author/date */
+    align-items: flex-start;
+    gap: 10px;
+    padding-top: 10px;
+  }
+  
+  /* View All Articles Button */
+  .icnndvaa {
+    margin: 20px auto 0;
+  }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .geninsight {
+    padding-bottom: 40px;
+  }
+
+  .lis {
+    margin-top: 60px;
+  }
+  
+  .industry {
+    font-size: 40px;
+  }
+  
+  .stay {
+    font-size: 18px;
+  }
+  
+  .genbox {
+    flex-direction: row; /* Main and secondary boxes side-by-side */
+    gap: 20px;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  /* Main Featured Article (mappingbox1) */
+  .mappingbox1 {
+    width: 60%; /* Main article takes up more space */
+    height: auto;
+    margin-left: 0;
+    
+    
+  }
+  
+  .box1img img {
+    width: 100%;
+    height: 100%; /* Adjust image height for tablets */
+    object-fit: cover; /* Ensure image covers the area properly */
+  }
+  
+  .gentext {
+    gap: 30px;
+  }
+
+  .thefuture {
+    font-size: 22px;
+  }
+  
+  .explore {
+    font-size: 15px;
+  }
+
+  .sdtndread {
+    gap: 10px;
+    justify-content: space-between;
+    
+  }
+
+  .icnndread {
+
+    position: static;
+    left: 0;
+  }
+  
+  /* Secondary Articles (mappingbox2) */
+  .mappingbox2 {
+    width: 40%; /* Secondary articles take up less space */
+    margin-top: 60px;
+    gap: 20px;
+  }
+  
+  .eachofthemm {
+    width: 100%;
+    height: 290px;
+    margin-bottom: 30px;
+  }
+
+  .tittle {
+    font-size: 18px;
+  }
+
+  .sdt2 {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+
+
+
+
+@media (min-width: 1200px) and (max-width: 1295px) {
+.icnndread, .read, .readicn{
+    
+  transform: translateX(-60px);
+}
+
+}

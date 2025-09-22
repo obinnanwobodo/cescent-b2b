@@ -121,3 +121,137 @@ color: #627184;
     font-family: system-ui;
 
 }
+
+
+
+
+
+/* RESPONSIENESS */
+
+
+@media (max-width: 768px) {
+  .genservices {
+    padding-bottom: 30px;
+  }
+
+  .oco {
+    margin-top: 50px;
+    padding: 0 20px; /* Add horizontal padding for better spacing */
+  }
+  
+  .os {
+    width: 90px;
+    font-size: 11px;
+    padding: 3px;
+  }
+  
+  .csfmc {
+    font-size: 32px; /* Smaller font size for the main heading */
+    text-align: center;
+  }
+  
+  .oe {
+    font-size: 16px;
+  }
+
+  .mappinggen {
+    grid-template-columns: repeat(1, 1fr); /* Stack cards in a single column */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .eachofthem {
+    width: 100%; /* Make cards full-width */
+    height: auto; /* Allow height to adjust based on content */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+  }
+
+  .eachofthem:hover {
+    transform: none; /* Disable the hover effect on mobile to prevent accidental scaling */
+  }
+
+  .allinagrp {
+    gap: 15px; /* Reduce gap between elements inside the card */
+  }
+
+  .icons {
+    max-width: 50px; /* Smaller icon container */
+    padding: 15px;
+  }
+  
+  .icons svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .tittle {
+    font-size: 18px;
+  }
+  
+  .desc {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .genservices {
+    padding-bottom: 40px;
+  }
+
+  .oco {
+    margin-top: 60px;
+  }
+  
+  .csfmc {
+    font-size: 40px; /* Adjust font size for tablets */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .oe {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .mappinggen {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    gap: 25px;
+    padding: 25px;
+  }
+  
+  .eachofthem {
+    width: auto; /* Let the grid handle the width */
+    height: 280px; /* Maintain a consistent height for better alignment */
+    padding: 25px;
+  }
+
+  .allinagrp {
+    gap: 20px;
+  }
+
+  .icons {
+    max-width: 55px; /* Slightly smaller than desktop */
+    padding: 16px;
+  }
+  
+  .icons svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .tittle {
+    font-size: 19px;
+  }
+  
+  .desc {
+    font-size: 15px;
+  }
+}

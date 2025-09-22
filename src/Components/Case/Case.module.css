@@ -151,3 +151,100 @@ white-space: nowrap;
 .readmore:hover {
     color: #2cbfc2;
 }
+
+
+
+
+
+
+/* RESPONSVENESS */
+
+
+
+@media (max-width: 768px) {
+  .gencase {
+    padding-bottom: 30px;
+  }
+
+  .cp {
+    margin-top: 50px;
+  }
+  
+  .cs {
+    width: 90px;
+    font-size: 11px;
+    padding: 3px;
+  }
+  
+  .proven {
+    font-size: 32px; /* Smaller font for the main heading */
+    text-align: center;
+  }
+  
+  .casemain {
+    grid-template-columns: repeat(1, 1fr); /* Single column layout for mobile */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .casecard {
+    min-height: auto; /* Allow height to adjust automatically */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow for mobile */
+  }
+
+  .casecard:hover {
+    transform: none; /* Disable hover effect on touch devices */
+  }
+
+  .metric {
+    font-size: 20px; /* Adjust metric font size */
+  }
+
+  .casebody h4 {
+    font-size: 16px;
+  }
+  
+  .casebody p {
+    font-size: 13px;
+  }
+  
+  .readmore {
+    font-size: 13px;
+  }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .proven {
+    font-size: 40px; /* Adjust heading size for tablets */
+  }
+
+  .casemain {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    gap: 25px;
+    padding: 30px 40px;
+  }
+  
+  .casecard {
+    min-height: 280px; /* Slightly adjust height for a balanced look */
+    padding: 25px;
+  }
+  
+  .metric {
+    font-size: 22px;
+  }
+
+  .casebody h4 {
+    font-size: 17px;
+  }
+  
+  .casebody p {
+    font-size: 14px;
+  }
+}

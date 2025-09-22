@@ -102,3 +102,116 @@ font-weight: 700;
   color: #6c757d;
   line-height: 1.6;
 }
+
+
+
+
+
+
+/* RESPONSIVENESS */
+
+
+@media (max-width: 768px) {
+  /* Main Container */
+  .genprocess {
+    padding: 30px 15px; /* Adjust padding for mobile view */
+  }
+
+  /* Title and Subtitle */
+  .fssr {
+    font-size: 32px; /* Smaller font size for the main title */
+    text-align: center; /* Center align the title */
+    padding: 0 10px;
+  }
+
+  .op {
+    width: 80px; /* Adjust width for the "Our Process" badge */
+    font-size: 11px;
+  }
+
+  /* Process Container */
+  .processContainer {
+    flex-direction: column; /* Stack all steps in a single column */
+    padding: 0 20px; /* Reduce horizontal padding */
+  }
+
+  /* Process Steps */
+  .processStep {
+    margin: 20px 0; /* Add vertical margin between steps */
+    text-align: left; /* Align text to the left for better readability */
+    border-left: 2px solid #1eebeb; /* Add a simple vertical line to connect steps */
+    padding-left: 25px; /* Add padding for the content */
+  }
+  
+  .processStep:last-child {
+      margin-bottom: 0;
+  }
+
+  /* Step Number */
+  .stepNumber {
+    position: static; /* Remove absolute positioning */
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+
+  .stepNumber::after {
+    display: none; /* Hide the arrow/connector on mobile */
+  }
+}
+
+
+
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  /* Process Container */
+  .processContainer {
+    display: grid; /* Use a grid for a more structured layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablet view */
+    gap: 30px;
+    padding: 20px 40px;
+  }
+
+  /* Process Steps */
+  .processStep {
+    margin: 0; /* Remove extra margin from steps */
+  }
+
+  /* Step Number */
+  .stepNumber {
+    margin: 0 auto 20px auto;
+  }
+  
+  .stepNumber::after {
+    /* Adjust arrow position for grid layout */
+    right: -15px; /* Move arrow closer */
+    border-left-width: 6px;
+  }
+  
+  /* Hide arrow on the second column of the grid */
+  .processStep:nth-child(2n) .stepNumber::after {
+      display: none;
+  }
+  
+  /* Add arrow to the bottom of the first column */
+  .processStep:nth-child(1) .stepNumber::after,
+  .processStep:nth-child(2) .stepNumber::after {
+      content: "";
+      position: absolute;
+      bottom: -30px; /* Position below the number */
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      border: none;
+      border-left: 2px solid #1eebeb;
+      height: 30px; /* Length of the line */
+  }
+  
+  /* Hide the line on the last row */
+  .processStep:nth-child(3) .stepNumber::after,
+  .processStep:nth-child(4) .stepNumber::after {
+      display: none;
+  }
+}

@@ -144,9 +144,9 @@ transform: scale(1.1);
 
 
 
-
-/* .backdrop {
-  position: relative;
+/* 
+.backdrop {
+  position: absolute;
   max-width: 30%;
   max-height: 50vh;
   background-color: red;
@@ -159,6 +159,10 @@ transform: scale(1.1);
 } */
 
 
+.modalBody{
+  position: relative;
+  bottom: 40px;
+}
 
 .modalOverlay {
   position: fixed;
@@ -197,7 +201,7 @@ transform: scale(1.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #e0e0e0; /* Separator line */
+
   padding-bottom: 20px;
   margin-bottom: 25px;
 }
@@ -227,14 +231,16 @@ transform: scale(1.1);
   color: #fefefe; /* Darker blue text color */
   font-size: 14px;
   font-weight: 600;
-  padding: 6px 12px;
+  padding: 1px 12px;
   border-radius: 20px;
   display:flex;
   margin-bottom: 20px;
   text-transform: uppercase;
   align-items: center;
   justify-content: center;
+margin:20px  auto ;
 
+  width: fit-content; 
 }
 
 .modalDescription {
@@ -260,6 +266,7 @@ transform: scale(1.1);
   text-align: center;
   background-color: #ffffff;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  max-height: 340px;
 }
 
 .optionCard:hover {
@@ -359,5 +366,333 @@ transform: scale(1.1);
   }
   .modalDescription {
     font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Step 2 Form ---------- */
+
+
+.modalBodyy{
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  position: relative;
+ 
+}
+
+.formRow {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.input {
+  flex: 1;
+  padding: 0.4rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus {
+  border-color: #1ee8eb;
+  outline: none;
+
+}
+
+.textarea {
+  min-height: 105px;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.textarea:focus {
+  border-color: #1ee8eb;
+  outline: none;
+
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+ 
+}
+
+.backBtn {
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  
+  max-height: 40px;
+  min-width: 400px;
+}
+
+.backBtn:hover {
+  background-color: #e0e0e0;
+}
+
+.submitBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #1ee8eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  
+  max-height: 40px;
+  min-width: 400px;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.submitBtn:hover {
+  background-color: #56d9db;
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+/* SUBMITTED */
+
+
+
+.successModal {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  animation: popUp 0.3s ease-out;
+}
+
+.successModal h2 {
+  color: #38b2ac;
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-family: system-ui;
+}
+
+.successModal p {
+  font-size: 16px;
+  color: #4a5568;
+  margin-bottom: 20px;
+  font-family: system-ui;
+}
+
+@keyframes popUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+
+
+/* RESPONSIVNESS */
+
+@media (max-width: 768px) {
+  /* Hero Section */
+  .genhero {
+    height: 100vh;
+    padding: 0 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .tyb, .wec {
+    font-size: 40px; /* Reduced font size for main headings */
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 0; /* Adjust spacing */
+  }
+
+  .wec {
+    bottom: 0; /* Remove the negative margin */
+  }
+
+  .wehelp {
+    font-size: 16px; /* Reduced font size for description */
+    margin: 20px 0;
+    line-height: 1.5;
+  }
+
+  .genbtn {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px;
+    width: 100%;
+    top: 0;
+  }
+
+  .btn1, .btn2 {
+    width: 100%; /* Make buttons full width */
+    max-width: 300px; /* Limit max width for readability */
+    padding: 12px;
+  }
+
+  /* Modal Adjustments for Mobile */
+  .modalContainer {
+    width: 90%; /* Modal takes up most of the screen */
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .modalHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .modalTitle {
+    font-size: 20px; /* Smaller modal title */
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .modalDescription {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .consultationOptions {
+    flex-direction: column; /* Stack consultation cards */
+    gap: 15px;
+  }
+
+  .optionCard {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Form Adjustments */
+  .formRow {
+    flex-direction: column; /* Stack form inputs */
+    gap: 1rem;
+  }
+
+  .input, .textarea {
+    width: 100%;
+  }
+
+  .buttonRow {
+    flex-direction: column-reverse; /* Stack buttons and put "Back" on top */
+  }
+
+  .backBtn, .submitBtn {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .successModal {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  /* Hero Section */
+  .genhero {
+    height: 90vh;
+    padding: 0 40px;
+  }
+  
+  .tyb, .wec {
+    font-size: 56px; /* Slightly smaller headings for tablets */
+  }
+
+  .wec {
+    bottom: 20px; /* Maintain some negative margin for visual stacking */
+  }
+
+  .wehelp {
+    font-size: 20px;
+  }
+
+  .genbtn {
+    flex-direction: row; /* Keep buttons side by side */
+    gap: 20px;
+  }
+
+  .btn1, .btn2 {
+    width: 200px; /* Adjusted button width */
+  }
+
+  /* Modal Adjustments for Tablet */
+  .modalContainer {
+    width: 75%; /* Widen the modal for tablets */
+    max-width: 850px;
+  }
+  
+  .modalTitle {
+    font-size: 22px;
+  }
+
+  .consultationOptions {
+    flex-wrap: wrap; /* Allow cards to wrap to a new line */
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .optionCard {
+    width: calc(33.33% - 20px); /* Adjust to fit three cards per row with gap */
+    max-width: none;
+  }
+  
+  /* Form Adjustments */
+  .backBtn, .submitBtn {
+    min-width: 200px;
+    max-width: unset;
+  }
+
+  .buttonRow {
+    flex-direction: row;
+    justify-content: center; /* Center the buttons */
   }
 }
