@@ -138,6 +138,7 @@ font-weight: 700;
   /* Main Container */
   .testigen {
     padding: 30px 15px; /* Adjust padding for mobile view */
+    height: max-content;
   }
 
   /* Title and Subtitle */
@@ -160,7 +161,7 @@ font-weight: 700;
   /* Testimonial Cards */
   .testimonialCard {
     padding: 20px; /* Reduce card padding */
-    min-height: auto; /* Allow height to adjust to content */
+ 
   }
 
   .testimonialQuote {
