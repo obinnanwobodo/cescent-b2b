@@ -300,12 +300,13 @@ margin-left: 25px;
 
 
 .successModal {
+  
   background: #fff;
   padding: 30px;
   border-radius: 12px;
   text-align: center;
   max-width: 400px;
-  margin: auto;
+  margin-bottom: 100px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
   animation: popUp 0.3s ease-out;
 }
@@ -315,6 +316,7 @@ margin-left: 25px;
   font-size: 22px;
   margin-bottom: 10px;
   font-family: system-ui;
+  white-space: nowrap;
 }
 
 .successModal p {
