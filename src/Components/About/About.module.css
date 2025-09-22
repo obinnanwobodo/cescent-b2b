@@ -136,3 +136,86 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.04);
   border-radius: 0.75rem;
   object-fit: cover;
 }
+
+
+
+
+/* RESPONSIVENESS */
+
+
+@media (max-width: 768px) {
+  .heading {
+  font-size: 40px; /* Adjusted for smaller screens */
+  line-height: 1.2;
+}
+
+.paragraph {
+  font-size: 16px; /* Adjusted for readability on mobile */
+}
+
+.left, .right {
+  width: 100%; /* Make sure both sections take full width on mobile */
+  max-width: none;
+}
+
+.left {
+  margin-bottom: 2rem; /* Add space between text and image */
+}
+
+.stats {
+  justify-content: center; /* Center the stats section */
+}
+}
+
+
+
+
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .container {
+    flex-direction: row; /* Change to horizontal layout */
+    text-align: left; /* Align text to the left */
+    gap: 2rem;
+  }
+  
+  .heading {
+    font-size: 48px; /* Bigger heading for tablets */
+  }
+
+  .paragraph {
+    font-size: 18px; /* Slightly larger paragraph text */
+  }
+
+  .left {
+    max-width: 50%; /* Let the left side take up to half the container */
+    margin-bottom: 0;
+  }
+
+  .right {
+    max-width: 50%; /* Let the right side take up to half the container */
+  }
+  
+  .stats {
+    justify-content: flex-start; /* Align stats to the left */
+  }
+}
+
+
+
+
+
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+  }
+  
+  .left {
+    max-width: 700px;
+  }
+  
+  .heading {
+    font-size: 48px; /* Keep the larger heading for desktop */
+  }
+}
