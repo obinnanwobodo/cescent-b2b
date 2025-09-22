@@ -411,6 +411,7 @@ margin:20px  auto ;
   font-size: 1rem;
   background-color: #fff;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  color: #212;
 }
 
 .input:focus {
@@ -428,6 +429,10 @@ margin:20px  auto ;
   resize: vertical;
   background-color: #fff;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formRow::placeholder, .textarea::placeholder{
+  color:  #9ca3af;
 }
 
 .textarea:focus {
@@ -570,7 +575,7 @@ margin:20px  auto ;
   .modalContainer {
     width: 90%; /* Modal takes up most of the screen */
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 780px;
   }
 
   .modalHeader {
@@ -665,6 +670,11 @@ margin:20px  auto ;
   }
 
   /* Modal Adjustments for Tablet */
+
+
+  
+  
+  
   .modalContainer {
     width: 75%; /* Widen the modal for tablets */
     max-width: 850px;
