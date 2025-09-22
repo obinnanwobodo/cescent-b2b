@@ -143,6 +143,12 @@
 
 
 @media (max-width: 768px) {
+
+
+  .container {
+margin-top: 35px;
+  }
+
   .heading {
   font-size: 40px; /* Adjusted for smaller screens */
   line-height: 1.2;
