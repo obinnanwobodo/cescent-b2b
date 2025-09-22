@@ -540,6 +540,10 @@ margin:20px  auto ;
     justify-content: center;
     text-align: center;
   }
+.trusted{
+position: relative;
+bottom: 20px;
+}
 
   .tyb, .wec {
     font-size: 40px; /* Reduced font size for main headings */
